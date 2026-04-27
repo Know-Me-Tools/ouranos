@@ -1,15 +1,29 @@
-import { getSessionFromServer } from "@/lib/api/auth/session";
-import { getProfile } from "@/lib/api/bsky/actor";
+"use client";
+
+import { useSession } from "next-auth/react";
+import useProfile from "@/lib/hooks/bsky/actor/useProfile";
 import Avatar from "@/components/dataDisplay/avatar/Avatar";
 import EditProfile from "@/components/actions/editProfile/EditProfile";
 import Image from "next/image";
 import FallbackBanner from "@/assets/images/fallbackBanner.png";
 
-export default async function ProfileContainer() {
-  const session = await getSessionFromServer();
-  const profile = await getProfile(session?.user.handle);
+export default function ProfileContainer() {
+  const { data: session } = useSession();
+  const handle = session?.user.handle ?? "";
+  const { data: profile, isLoading } = useProfile(handle);
 
-  if (!profile) return null;
+  if (isLoading || !profile) {
+    return (
+      <section className="flex flex-col gap-5">
+        <h2 className="text-skin-base mx-3 mb-2 text-2xl font-semibold md:mx-0">
+          Profile
+        </h2>
+        <div className="border-skin-base animate-pulse rounded-none border border-x-0 p-3 md:rounded-2xl md:border-x">
+          <div className="bg-skin-muted h-32 w-full rounded-2xl" />
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="flex flex-col gap-5">
@@ -57,9 +71,7 @@ export default async function ProfileContainer() {
           <p className="text-skin-secondary text-sm">
             Update your display name, bio, avatar, and banner image.
           </p>
-          <div>
-            <EditProfile profile={profile} />
-          </div>
+          <EditProfile profile={profile} />
         </div>
       </section>
     </section>
