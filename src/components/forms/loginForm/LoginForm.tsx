@@ -60,9 +60,9 @@ export default function LoginForm() {
       <section className="bg-skin-base border border-skin-base shadow-2xl shadow-primary-light/30 max-w-xs rounded-2xl p-5">
         <Image
           src="/logo.svg"
-          alt="Ouranos logo"
-          width={150}
-          height={50}
+          alt="KnowMe"
+          width={180}
+          height={56}
           priority
           className="mx-auto mb-3"
         />
@@ -82,9 +82,9 @@ export default function LoginForm() {
     <section className="bg-skin-base border border-skin-base max-w-xs rounded-2xl p-5 shadow-2xl shadow-primary-light/30">
       <Image
         src="/logo.svg"
-        alt="Ouranos logo"
-        width={150}
-        height={50}
+        alt="KnowMe"
+        width={180}
+        height={56}
         className="mx-auto mb-3"
       />
       <h1 className="text-skin-base mb-1 text-xl font-semibold">Welcome</h1>

@@ -14,7 +14,7 @@ export default function SidePanel() {
         <div className="flex items-center gap-3 group">
           <Image
             src="/ouranos.svg"
-            alt="Ouranos logo"
+            alt="KnowMe logo"
             width={44}
             height={44}
             priority
@@ -22,9 +22,9 @@ export default function SidePanel() {
           />
           <Image
             src="/ouranosText.svg"
-            alt="Ouranos text"
-            width={84}
-            height={26}
+            alt="KnowMe"
+            width={110}
+            height={30}
             priority
             className="hidden lg:block"
           />

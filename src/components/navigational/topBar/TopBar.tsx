@@ -32,16 +32,16 @@ export default function TopBar(props: Props) {
         <div className="flex items-center gap-2 group">
           <Image
             src="/ouranos.svg"
-            alt="Ouranos logo"
+            alt="KnowMe logo"
             width={30}
             height={30}
             className="block transition-transform duration-700 ease-in-out group-hover:rotate-180"
           />
           <Image
             src="/ouranosText.svg"
-            alt="Ouranos text"
-            width={60}
-            height={20}
+            alt="KnowMe"
+            width={80}
+            height={22}
           />
         </div>{" "}
       </Button>

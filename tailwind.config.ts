@@ -86,6 +86,7 @@ export default {
       fontFamily: {
         arabic: ["var(--font-noto-sans-arabic"],
         latin: ["var(--font-inter)"],
+        brand: ["var(--font-space-grotesk)", "sans-serif"],
       },
     },
   },

@@ -9,7 +9,7 @@ import { getSessionFromServer } from "@/lib/api/auth/session";
 import { AgentProvider } from "../providers/agent";
 
 export const metadata: Metadata = {
-  title: { template: "%s — Ouranos", default: "Ouranos" },
+  title: { template: "%s — KnowMe", default: "KnowMe" },
   description: "Home",
 };
 

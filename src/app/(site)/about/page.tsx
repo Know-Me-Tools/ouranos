@@ -9,16 +9,16 @@ export default function Page() {
         <div className="flex items-center gap-3">
           <Image
             src="/ouranos.svg"
-            alt="Ouranos logo"
+            alt="KnowMe logo"
             width={40}
             height={40}
             className="block transition-transform duration-700 ease-in-out hover:rotate-180"
           />
           <Image
             src="/ouranosText.svg"
-            alt="Ouranos text"
-            width={70}
-            height={20}
+            alt="KnowMe"
+            width={100}
+            height={24}
           />
         </div>{" "}
         <Link
@@ -33,42 +33,34 @@ export default function Page() {
           About
         </h1>
         <p className="text-skin-base">
-          Ouranos is an open-source{" "}
+          KnowMe is a social client built on{" "}
           <Link
             href="https://blueskyweb.xyz/"
             className="underline underline-offset-2"
           >
             Bluesky
           </Link>{" "}
-          client for the web, built using{" "}
+          and the{" "}
+          <Link
+            href="https://atproto.com/"
+            className="underline underline-offset-2"
+          >
+            AT Protocol
+          </Link>
+          , a decentralized networking technology for social media. It is built
+          using{" "}
           <Link
             href="https://nextjs.org/"
             className="underline underline-offset-2"
           >
             Next.js
-          </Link>
-          . Similar to the official Bluesky app, it uses the{" "}
-          <Link
-            href="https://blueskyweb.xyz/"
-            className="underline underline-offset-2"
-          >
-            AT Protocol
-          </Link>
-          , a decentralized networking technology for social media. This is
-          similar to Twitter apps such as Twitterrific or Tweetbot that used
-          Twitter's API in the past.
+          </Link>{" "}
+          and runs on a fully self-hosted stack.
         </p>
 
         <p className="text-skin-base mt-3">
-          The app is being developed and designed by me,{" "}
-          <Link
-            href="https://pouriade.com"
-            className="underline underline-offset-2"
-          >
-            Pouria
-          </Link>
-          . I started the project to learn more about the AT Protocol and as fun
-          way to practice my skills.
+          KnowMe is powered by AI that understands you — bringing
+          context-aware social experiences to the open social web.
         </p>
 
         <h2 className="text-skin-base mb-6 mt-12 text-2xl font-medium">
@@ -112,49 +104,33 @@ export default function Page() {
         </h3>
         <p className="text-skin-base">
           App passwords allow you to log in and use the app, but restrict
-          third-party clients (ex. Ouranos) from certain functionalities such as
+          third-party clients (ex. KnowMe) from certain functionalities such as
           account deletion or generating additional app passwords.
         </p>
         <h3 className="text-skin-base mb-1 mt-6 text-lg font-semibold">
           Where can I see progress updates?
         </h3>
         <p className="text-skin-base">
-          You can see what is being worked on under{" "}
+          You can follow progress on our{" "}
           <Link
-            href="https://github.com/users/pdelfan/projects/1"
+            href="https://github.com/Know-Me-Tools/ouranos"
             className="underline underline-offset-2"
           >
-            projects
-          </Link>{" "}
-          on GitHub.{" "}
+            GitHub repository
+          </Link>
+          .
         </p>
 
         <h3 className="text-skin-base mb-1 mt-6 text-lg font-semibold">
           How can I provide feedback?
         </h3>
         <p className="text-skin-base">
-          If you have an account on GitHub, you can go to the project's{" "}
+          Open an issue on our{" "}
           <Link
-            href="https://github.com/pdelfan/ouranos"
+            href="https://github.com/Know-Me-Tools/ouranos"
             className="underline underline-offset-2"
           >
-            repository
-          </Link>{" "}
-          and create an issue with a provided label (feature request, bug,
-          question, etc). For general questions and anything that else that
-          comes to your mind, there is{" "}
-          <Link
-            href="https://github.com/pdelfan/ouranos/discussions"
-            className="underline underline-offset-2"
-          >
-            Discussions
-          </Link>
-          . If you are not on GitHub, you can also{" "}
-          <Link
-            href="https://bsky.app/profile/did:plc:3sapfnszmvjc6wa4ml3ybkwb"
-            className="underline underline-offset-2"
-          >
-            mention me on Bluesky
+            GitHub repository
           </Link>
           .
         </p>
@@ -163,13 +139,12 @@ export default function Page() {
           Can I support the project?
         </h3>
         <p className="text-skin-base mt-3">
-          If you like to support the project and help keep the site up and
-          running, stay tuned for more information! If you enjoy using Ouranos,
-          let me know! I'd love to hear from you.
+          Stay tuned for more information! If you enjoy using KnowMe,
+          we&apos;d love to hear from you.
         </p>
       </section>
       <footer className="text-skin-tertiary mt-16 text-center text-sm font-medium">
-        OURANOS · {new Date().getFullYear()}
+        KNOWME · {new Date().getFullYear()}
       </footer>
     </main>
   );
