@@ -89,7 +89,14 @@ export default function LoginForm() {
       />
       <h1 className="text-skin-base mb-1 text-xl font-semibold">Welcome</h1>
       <p className="text-skin-secondary mb-3 text-sm font-medium">
-        We recommend using an{" "}
+        New here?{" "}
+        <Link
+          href="/signup"
+          className="text-skin-link-base hover:text-skin-link-hover"
+        >
+          Create an account
+        </Link>
+        {" "}on our PDS, or use an{" "}
         <Link
           href="https://bsky.app/settings/app-passwords"
           target="_blank"
@@ -97,7 +104,7 @@ export default function LoginForm() {
         >
           app password
         </Link>{" "}
-        to log in.
+        from another PDS.
       </p>
       <form
         className="mt-5 text-sm font-medium"

@@ -40,10 +40,10 @@ export default function Home() {
 
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/login"
+            href="/signup"
             className="text-skin-base bg-skin-muted/70 hover:bg-skin-muted rounded-full px-5 py-3 font-medium"
           >
-            Sign up / Log in
+            Sign up
           </Link>
           <Link
             href="/login"
