@@ -113,7 +113,7 @@ export default function LoginForm() {
             type="text"
             name="handle"
             icon={<MdAlternateEmail />}
-            placeholder="handle.bsky.social"
+            placeholder="handle.pds.know-me.tools"
             value={handle}
             onChange={(e) => {
               setError("");

@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
         handle: {
           label: "Handle",
           type: "text",
-          placeholder: "handle.bsky.social",
+          placeholder: "handle.pds.know-me.tools",
         },
         password: { label: "App Password", type: "password" },
       },
