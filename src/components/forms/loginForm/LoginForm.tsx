@@ -96,15 +96,7 @@ export default function LoginForm() {
         >
           Create an account
         </Link>
-        {" "}on our PDS, or use an{" "}
-        <Link
-          href="https://bsky.app/settings/app-passwords"
-          target="_blank"
-          className="text-skin-link-base hover:text-skin-link-hover"
-        >
-          app password
-        </Link>{" "}
-        from another PDS.
+        . Use your password or an app password to log in.
       </p>
       <form
         className="mt-5 text-sm font-medium"

@@ -8,6 +8,8 @@ import {
   BiSolidXCircle,
   BiSolidPalette,
   BiSolidPlanet,
+  BiSolidKey,
+  BiSolidUser,
 } from "react-icons/bi";
 import { MdRemoveRedEye } from "react-icons/md";
 import { BiSolidBellOff } from "react-icons/bi";
@@ -82,6 +84,20 @@ export default async function SettingsContainer() {
           General
         </h3>
         <div className="flex flex-col">
+          <Link
+            href="/dashboard/settings/profile"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSolidUser className="text-skin-icon-base text-xl" />
+            Profile
+          </Link>
+          <Link
+            href="/dashboard/settings/app-passwords"
+            className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
+          >
+            <BiSolidKey className="text-skin-icon-base text-xl" />
+            App Passwords
+          </Link>
           <Link
             href="/dashboard/settings/appearance"
             className="border-skin-base text-skin-base hover:bg-skin-secondary flex items-center gap-2 border border-x-0 p-3 last:border-b md:border-x md:first:rounded-t-2xl md:last:rounded-b-2xl odd:[&:not(:last-child)]:border-b-0 even:[&:not(:last-child)]:border-b-0"
