@@ -98,7 +98,7 @@ export default function SignupForm() {
             type="text"
             name="handle"
             icon={<MdAlternateEmail />}
-            placeholder="yourname.pds.know-me.tools"
+            placeholder="yourname.know-me.tools"
             value={handle}
             onChange={(e) => {
               setError("");
