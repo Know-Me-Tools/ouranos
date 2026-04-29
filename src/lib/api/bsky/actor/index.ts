@@ -4,12 +4,12 @@ import {
   LabelPreference,
   BskyThreadViewPreference,
 } from "@atproto/api";
-import { getAgentFromServer } from "../agent";
+import { getAgentFromServer, getAppViewAgentFromServer } from "../agent";
 import { ContentFilterLabel } from "../../../../../types/feed";
 
 export const getProfile = async (handle: string | undefined, agent?: Agent) => {
   if (!handle) return;
-  if (!agent) agent = await getAgentFromServer();
+  if (!agent) agent = await getAppViewAgentFromServer();
   const profile = await agent.getProfile({ actor: handle });
 
   if (!profile.success) throw new Error("Could not get profile");
@@ -17,7 +17,7 @@ export const getProfile = async (handle: string | undefined, agent?: Agent) => {
 };
 
 export const getSuggestions = async () => {
-  const agent = await getAgentFromServer();
+  const agent = await getAppViewAgentFromServer();
   const suggestions = await agent.getSuggestions({ limit: 10 });
   if (!suggestions.success) return null;
   return suggestions.data.actors;
@@ -55,7 +55,7 @@ export const searchPosts = async (
   sort: "latest" | "top",
   agent?: Agent,
 ) => {
-  if (!agent) agent = await getAgentFromServer();
+  if (!agent) agent = await getAppViewAgentFromServer();
   try {
     const response = await agent.app.bsky.feed.searchPosts({
       q: term,
@@ -73,7 +73,7 @@ export const searchPosts = async (
 };
 
 export const getPreferences = async (agent?: Agent) => {
-  if (!agent) agent = await getAgentFromServer();
+  if (!agent) agent = await getAppViewAgentFromServer();
   const prefs = await agent.app.bsky.actor.getPreferences();
   if (!prefs.success) throw new Error("Could not get preferences");
   return prefs.data.preferences;
